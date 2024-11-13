@@ -1,0 +1,12 @@
+
+
+
+<div class="product-container">
+    <div *ngFor="let productDetail of productdetails">
+        <app-card
+            [srcLink]="productDetail.src"
+            [title]="productDetail.title"
+            [price]="productDetail.price">
+        </app-card>
+    </div>
+</div>

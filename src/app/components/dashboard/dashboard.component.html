@@ -1,0 +1,94 @@
+<div class="responsive-container">
+  <div class="content">
+    <h1>FIND CLOTHES THAT MATCH YOUR STYLE</h1>
+    <p>
+      Browse through our diverse range of meticulously crafted garments,
+      designed to bring out your individuality and cater to your sense of style.
+    </p>
+    <button mat-stroked-button>Shop Now</button>
+    <div class="stats">
+      <div>
+        <h1>200+</h1>
+        <p>International Brands</p>
+      </div>
+      <div>
+        <h1>2000+</h1>
+        <p>High-Quality Products</p>
+      </div>
+      <div>
+        <h1>30000+</h1>
+        <p>Happy Customers</p>
+      </div>
+    </div>
+  </div>
+  <div class="image-container">
+    <img class="icon" src="../../../assets/Vector.png" />
+    <div class="main-images">
+      <img class="product-image" src="../../../assets/dashboard1.jpg" />
+      <img class="vector-image" src="../../../assets/big_vector.png" />
+    </div>
+  </div>
+</div>
+
+<div style="text-align: center"><h1>Our Products</h1></div>
+
+<div class="product-container">
+  <div *ngFor="let productDetail of productdetails">
+    <app-card
+      [srcLink]="productDetail.src"
+      [title]="productDetail.title"
+      [price]="productDetail.price"
+    >
+    </app-card>
+  </div>
+</div>
+
+<div style="padding: 40px; border-radius: 40%">
+  <mat-card style="background: #f0f0f0; padding: 20px">
+    <h1>Browse by dress style</h1>
+
+    <div class="grid-container">
+      <div class="item1">
+        <div style="display: flex">
+          <h1 style="margin-left: 25px">FORMAL</h1>
+
+          <img
+            class="banner2"
+            src="../../../assets/shirtbanner.png"
+          />
+        </div>
+      </div>
+      <div class="item2">
+        <div style="display: flex">
+          <h1 style="margin-left: 25px">CASUAL</h1>
+          <img
+           class="banner1"
+            src="../../../assets/tees.png"
+          />
+        </div>
+      </div>
+      <div class="item3">
+        <div style="display: flex">
+          <h1 style="margin-left: 25px">PARTY</h1>
+
+          <img
+           class="banner3"
+            src="../../../assets/girl_banner.png"
+          />
+        </div>
+      </div>
+      <div class="item4">
+        <div style="display: flex">
+          <h1 style="margin-left: 25px">PARTY</h1>
+
+          <img
+           class="banner3"
+            src="../../../assets/gym.png"
+          />
+        </div>
+      </div>
+
+
+    </div>
+  </mat-card>
+</div>

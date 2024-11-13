@@ -1,0 +1,33 @@
+.example-card {
+  width: 100%; /* Make the card take up the full width of its container */
+  max-width: 400px; /* Limit the max width for larger screens */
+  margin: 10px auto; /* Center the card and add space around it */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.example-card img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio for the image */
+}
+
+@media (max-width: 768px) {
+  .example-card {
+      max-width: 100%; /* Allow the card to be full width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .example-card {
+      padding: 10px; /* Add padding for smaller screens */
+  }
+
+  .example-card img {
+      width: 100%;
+  }
+
+  .example-card p {
+      font-size: 14px; /* Reduce font size for readability on mobile */
+  }
+}
