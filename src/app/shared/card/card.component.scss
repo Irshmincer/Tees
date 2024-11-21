@@ -5,29 +5,94 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 20px;
+
+  img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio for the image */
+  }
+
+  .card-content {
+    display: flex;
+    justify-content: space-between; /* Align title/price on the left and icons on the right */
+    align-items: center;
+    margin-top: 10px;
+
+    .left-content {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+
+      .title {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .price {
+        font-size: 14px;
+        color: #757575;
+        margin: 0;
+      }
+    }
+
+    .right-content {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      .icon {
+        cursor: pointer;
+        color: #3f51b5;
+        font-size: 24px;
+      }
+
+      .quantity {
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+  }
 }
 
-.example-card img {
-  width: 100%;
-  height: auto; /* Maintain aspect ratio for the image */
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
   .example-card {
-      max-width: 100%; /* Allow the card to be full width on smaller screens */
+    max-width: 100%; /* Allow the card to be full width on smaller screens */
+  }
+
+  .example-card .card-content {
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start;
+
+    .left-content {
+      margin-bottom: 10px; /* Add spacing between left and right sections */
+    }
+
+    .right-content {
+      justify-content: space-between; /* Spread icons and quantity on smaller screens */
+    }
   }
 }
 
 @media (max-width: 480px) {
   .example-card {
-      padding: 10px; /* Add padding for smaller screens */
+    padding: 10px; /* Add padding for smaller screens */
   }
 
   .example-card img {
-      width: 100%;
+    width: 100%;
   }
 
-  .example-card p {
-      font-size: 14px; /* Reduce font size for readability on mobile */
+  .example-card .card-content .left-content .title {
+    font-size: 14px; /* Adjust font size for mobile */
+  }
+
+  .example-card .card-content .left-content .price {
+    font-size: 12px; /* Adjust font size for mobile */
+  }
+
+  .example-card .card-content .right-content .icon {
+    font-size: 20px; /* Reduce icon size for mobile */
   }
 }
